@@ -13,7 +13,8 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepositoy>();
 
 builder.Services.AddScoped<IEmployeeBLL, EmployeeBLL>();
 
-builder.Services.AddDbContext<FDbContext>(u => u.UseSqlServer("Data Source=.;Initial Catalog=InformerDB;User ID=sa;Password=1;TrustServerCertificate=True"));
+builder.Services.AddDbContext<FDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("InformerDb") ?? throw new InvalidOperationException("Connection string 'LicoriceBackContext' not found.")));
 
 var app = builder.Build();
 
