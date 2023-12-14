@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Informer", "Informer\Informer.csproj", "{5BD9CD3C-2480-4A6F-BFE8-3EFD39AF2D1C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformerBLL", "InformerBLL\InformerBLL.csproj", "{0688941A-15DE-47A7-9573-F22F69F8DA83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformerBLL.Contract", "InformerBLL.Contract\InformerBLL.Contract.csproj", "{6A819912-060F-42CF-9DC2-9663BDC50928}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformerRepository", "InformerRepository\InformerRepository.csproj", "{56E27BAA-EFEC-472F-BDC3-364870A7DD03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InformerRepository.Contract", "InformerRepository.Contract\InformerRepository.Contract.csproj", "{556A8527-639D-4974-A928-A8AE2F3C9BD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{3543208A-B7EB-4E40-964E-8E4FC6E5424D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{C843FE47-8AE8-4154-B17B-92E70F0A456F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controller", "Controller", "{CDCBDCBB-44B1-4BFA-967E-6963EB8DC485}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BD9CD3C-2480-4A6F-BFE8-3EFD39AF2D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BD9CD3C-2480-4A6F-BFE8-3EFD39AF2D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BD9CD3C-2480-4A6F-BFE8-3EFD39AF2D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BD9CD3C-2480-4A6F-BFE8-3EFD39AF2D1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0688941A-15DE-47A7-9573-F22F69F8DA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0688941A-15DE-47A7-9573-F22F69F8DA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0688941A-15DE-47A7-9573-F22F69F8DA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0688941A-15DE-47A7-9573-F22F69F8DA83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A819912-060F-42CF-9DC2-9663BDC50928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A819912-060F-42CF-9DC2-9663BDC50928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A819912-060F-42CF-9DC2-9663BDC50928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A819912-060F-42CF-9DC2-9663BDC50928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E27BAA-EFEC-472F-BDC3-364870A7DD03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E27BAA-EFEC-472F-BDC3-364870A7DD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E27BAA-EFEC-472F-BDC3-364870A7DD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E27BAA-EFEC-472F-BDC3-364870A7DD03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{556A8527-639D-4974-A928-A8AE2F3C9BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{556A8527-639D-4974-A928-A8AE2F3C9BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{556A8527-639D-4974-A928-A8AE2F3C9BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{556A8527-639D-4974-A928-A8AE2F3C9BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5BD9CD3C-2480-4A6F-BFE8-3EFD39AF2D1C} = {CDCBDCBB-44B1-4BFA-967E-6963EB8DC485}
+		{0688941A-15DE-47A7-9573-F22F69F8DA83} = {3543208A-B7EB-4E40-964E-8E4FC6E5424D}
+		{6A819912-060F-42CF-9DC2-9663BDC50928} = {3543208A-B7EB-4E40-964E-8E4FC6E5424D}
+		{56E27BAA-EFEC-472F-BDC3-364870A7DD03} = {C843FE47-8AE8-4154-B17B-92E70F0A456F}
+		{556A8527-639D-4974-A928-A8AE2F3C9BD8} = {C843FE47-8AE8-4154-B17B-92E70F0A456F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC00CC5D-E26A-45EF-BB36-D5B85AD4C756}
+	EndGlobalSection
+EndGlobal
