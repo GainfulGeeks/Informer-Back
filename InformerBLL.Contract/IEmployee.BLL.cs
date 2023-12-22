@@ -1,6 +1,6 @@
-﻿using InformerBLL.Contract.Models;
+﻿using Informer.BLL.Contract.Models;
 
-namespace InformerBLL.Contract;
+namespace Informer.BLL.Contract;
 
 public interface IEmployeeBLL
 {

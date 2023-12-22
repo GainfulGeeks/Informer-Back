@@ -1,4 +1,4 @@
-﻿namespace InformerRepository.Contract.Models;
+﻿namespace Informer.Repository.Contract.Models;
 
 public class Employee
 {

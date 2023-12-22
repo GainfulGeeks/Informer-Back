@@ -1,8 +1,8 @@
 ﻿using Informer.Repository.Contract.Models;
-using Informer.Repository.Mappings;
+using Informer.Repository.Sqlite.Mappings;
 using Microsoft.EntityFrameworkCore;
 
-namespace Informer.Repository.DbContexts;
+namespace Informer.Repository.Sqlite.DbContexts;
 
 public class FDbContext : DbContext
 {
@@ -18,5 +18,11 @@ public class FDbContext : DbContext
         base.OnModelCreating(Builder);
 
         Builder.ApplyConfigurationsFromAssembly(typeof(EmployeeMapping).Assembly);
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        //optionsBuilder.UseSqlite("Data Source=c:\\Database\\products.db");
+        
     }
 }

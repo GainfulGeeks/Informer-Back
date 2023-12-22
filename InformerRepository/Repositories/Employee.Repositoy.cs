@@ -1,8 +1,8 @@
-﻿using InformerRepository.Contract;
-using InformerRepository.Contract.Models;
-using InformerRepository.DbContexts;
+﻿using Informer.Repository.Contract;
+using Informer.Repository.Contract.Models;
+using Informer.Repository.DbContexts;
 
-namespace InformerRepository.Repositories;
+namespace Informer.Repository.Repositories;
 
 public class EmployeeRepositoy : IEmployeeRepository
 {

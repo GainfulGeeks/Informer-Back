@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Informer.Repository.Mappings;
+namespace Informer.Repository.Sqlite.Mappings;
 
 public class EmployeeMapping : IEntityTypeConfiguration<Employee>
 {

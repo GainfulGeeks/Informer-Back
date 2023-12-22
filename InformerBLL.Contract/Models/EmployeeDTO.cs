@@ -1,4 +1,4 @@
-﻿namespace InformerBLL.Contract.Models
+﻿namespace Informer.BLL.Contract.Models
 {
     public class EmployeeDTO
     {

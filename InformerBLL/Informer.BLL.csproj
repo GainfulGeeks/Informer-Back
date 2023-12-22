@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InformerBLL.Contract\InformerBLL.Contract.csproj" />
-    <ProjectReference Include="..\InformerRepository\InformerRepository.csproj" />
+    <ProjectReference Include="..\InformerBLL.Contract\Informer.BLL.Contract.csproj" />
+    <ProjectReference Include="..\InformerRepository\Informer.Repository.csproj" />
   </ItemGroup>
 
 </Project>

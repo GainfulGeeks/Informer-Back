@@ -1,8 +1,8 @@
-﻿using InformerBLL.Contract;
-using InformerBLL.Contract.Models;
-using InformerRepository.Contract;
+﻿using Informer.BLL.Contract;
+using Informer.BLL.Contract.Models;
+using Informer.Repository.Contract;
 
-namespace InformerBLL.Services;
+namespace Informer.BLL.Services;
 
 public class EmployeeBLL : IEmployeeBLL
 {
