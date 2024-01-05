@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
@@ -11,11 +11,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Informer.Repository.Sqlite\Informer.Repository.Sqlite.csproj" />
+		<ProjectReference Include="..\Informer.Repository.Sqlite\Informer.Repository.csproj" />
 		<ProjectReference Include="..\InformerBLL.Contract\Informer.BLL.Contract.csproj" />
 		<ProjectReference Include="..\InformerBLL\Informer.BLL.csproj" />
 		<ProjectReference Include="..\InformerRepository.Contract\Informer.Repository.Contract.csproj" />
-		<ProjectReference Include="..\InformerRepository\Informer.Repository.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

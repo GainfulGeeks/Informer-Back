@@ -1,14 +1,14 @@
 ﻿using Informer.Repository.Contract;
 using Informer.Repository.Contract.Models;
-using Informer.Repository.Sqlite.DbContexts;
+using Informer.Repository.DbContexts;
 
-namespace Informer.Repository.Sqlite.Repositories;
+namespace Informer.Repository.Repositories;
 
 public class EmployeeRepositoy : IEmployeeRepository
 {
-    private readonly FDbContext _dbContext;
+    private readonly InformerDbContext _dbContext;
 
-    public EmployeeRepositoy(FDbContext contexts)
+    public EmployeeRepositoy(InformerDbContext contexts)
     {
         _dbContext = contexts;
     }

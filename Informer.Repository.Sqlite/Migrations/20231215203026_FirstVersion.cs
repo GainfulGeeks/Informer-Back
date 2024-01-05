@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Informer.Repository.Sqlite.Migrations
+namespace Informer.Repository.Migrations
 {
     /// <inheritdoc />
     public partial class FirstVersion : Migration

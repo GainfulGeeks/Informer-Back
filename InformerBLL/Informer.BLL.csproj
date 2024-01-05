@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\InformerBLL.Contract\Informer.BLL.Contract.csproj" />
-    <ProjectReference Include="..\InformerRepository\Informer.Repository.csproj" />
+    <ProjectReference Include="..\InformerRepository.Contract\Informer.Repository.Contract.csproj" />
   </ItemGroup>
 
 </Project>

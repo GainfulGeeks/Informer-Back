@@ -1,10 +1,8 @@
 using Informer.BLL.Contract;
 using Informer.BLL.Services;
 using Informer.Repository.Contract;
-//using Informer.Repository.DbContexts;
-//using Informer.Repository.Repositories;
-using Informer.Repository.Sqlite.DbContexts;
-using Informer.Repository.Sqlite.Repositories;
+using Informer.Repository.DbContexts;
+using Informer.Repository.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var allowSpecificOrigins = "AllowSpecificOrigins";
@@ -26,7 +24,7 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepositoy>();
 
 builder.Services.AddScoped<IEmployeeBLL, EmployeeBLL>();
 
-builder.Services.AddDbContext<FDbContext>(u => u.UseSqlite("Data Source=c:\\database\\blog.db"));
+builder.Services.AddDbContext<InformerDbContext>(u => u.UseSqlite("Data Source=Informer.db"));
 
 var app = builder.Build();
 
