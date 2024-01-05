@@ -19,9 +19,6 @@ public class EmployeesController : Microsoft.AspNetCore.Mvc.Controller
     {
         var employees = _employeeBLL.GetEmployees();
 
-
-        //employees.Select(x => new { x.FirstName, Tel = x.PhoneNumber }).ToList();
-
         return Ok(employees);
     }
 }
