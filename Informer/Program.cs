@@ -17,6 +17,7 @@ builder.Services.AddCors(options =>
                           policy.WithOrigins("*");
                       });
 });
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllers();
 
@@ -27,6 +28,9 @@ builder.Services.AddScoped<IEmployeeBLL, EmployeeBLL>();
 builder.Services.AddDbContext<InformerDbContext>(u => u.UseSqlite("Data Source=Informer.db"));
 
 var app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseCors(allowSpecificOrigins);
 
