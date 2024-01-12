@@ -3,6 +3,7 @@ using Informer.BLL.Services;
 using Informer.Repository.Contract;
 using Informer.Repository.DbContexts;
 using Informer.Repository.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 
 var allowSpecificOrigins = "AllowSpecificOrigins";
@@ -17,6 +18,17 @@ builder.Services.AddCors(options =>
                           policy.WithOrigins("*");
                       });
 });
+//builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+//    .AddEntityFrameworkStores<InformerDbContext>();
+
+//builder.Services.AddIdentityServer()
+//    .AddApiAuthorization<ApplicationUser, InformerDbContext>();
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,
+        options => builder.Configuration.Bind("JwtSettings", options));
+
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddControllers();
@@ -31,7 +43,8 @@ var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
-
+app.UseAuthentication();
+app.UseIdentityServer();
 app.UseCors(allowSpecificOrigins);
 
 app.MapControllers();
