@@ -1,10 +1,12 @@
 ﻿using Informer.BLL.Contract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Informer.Controller;
+namespace Informer.Controllers;
 
+[Authorize]
 [ApiController]
-public class EmployeesController : Microsoft.AspNetCore.Mvc.Controller
+public class EmployeesController : Controller
 {
     private readonly IEmployeeBLL _employeeBLL;
 
@@ -18,9 +20,6 @@ public class EmployeesController : Microsoft.AspNetCore.Mvc.Controller
     public IActionResult Get()
     {
         var employees = _employeeBLL.GetEmployees();
-
-
-        employees.Select(x => new { x.FirstName, Tel = x.PhoneNumber }).ToList();
 
         return Ok(employees);
     }

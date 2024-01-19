@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Informer.Repository.Sqlite.Mappings;
+namespace Informer.Repository.Mappings;
 
 public class EmployeeMapping : IEntityTypeConfiguration<Employee>
 {
@@ -11,7 +11,6 @@ public class EmployeeMapping : IEntityTypeConfiguration<Employee>
         builder.ToTable("Employee");
 
         builder.HasKey(x => x.Id);
-
 
         builder.Property(x => x.FirstName).HasMaxLength(50);
 
