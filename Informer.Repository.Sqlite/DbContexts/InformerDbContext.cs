@@ -1,10 +1,11 @@
 ﻿using Informer.Repository.Contract.Models;
 using Informer.Repository.Mappings;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Informer.Repository.DbContexts;
 
-public class InformerDbContext : DbContext
+public class InformerDbContext :IdentityDbContext
 {
     public DbSet<Employee> Employees { get; set; }
 

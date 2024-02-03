@@ -1,4 +1,5 @@
 ﻿using Informer.BLL.Contract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Informer.Controller;
@@ -13,6 +14,7 @@ public class EmployeesController : Microsoft.AspNetCore.Mvc.Controller
         _employeeBLL = employeeBLL;
     }
 
+    [Authorize]
     [Route("api/[controller]")]
     [HttpGet]
     public IActionResult Get()
