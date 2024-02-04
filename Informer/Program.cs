@@ -63,6 +63,7 @@ builder.Services.AddSwaggerGen(option =>
 
     option.OperationFilter<SecurityRequirementsOperationFilter>();
 });
+
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepositoy>();
 
 builder.Services.AddScoped<IEmployeeBLL, EmployeeBLL>();
@@ -79,7 +80,10 @@ var app = builder.Build();
 app.MapIdentityApi<IdentityUser>();
 app.UseSwagger();
 app.UseSwaggerUI();
+
 app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseCors(allowSpecificOrigins);
 
 app.MapControllers();
