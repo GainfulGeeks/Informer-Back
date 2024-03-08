@@ -20,18 +20,6 @@ builder.Services.AddCors(options =>
                           policy.WithOrigins("*");
                       });
 });
-//builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-//    .AddEntityFrameworkStores<InformerDbContext>();
-
-//builder.Services.AddIdentityServer()
-//    .AddApiAuthorization<ApplicationUser, InformerDbContext>();
-
-
-//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-//    .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme,
-//        options => builder.Configuration.Bind("JwtSettings", options));
-
-
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -57,8 +45,6 @@ builder.Services.AddSwaggerGen(option =>
         In = ParameterLocation.Header,
         Name = "Authorization",
         Type = SecuritySchemeType.ApiKey
-        //BearerFormat ="JWT",
-        //Scheme = "Bearer"
     });
 
     option.OperationFilter<SecurityRequirementsOperationFilter>();
@@ -73,7 +59,6 @@ builder.Services.AddDbContext<InformerDbContext>(u => u.UseSqlite("Data Source=I
 builder.Services.AddAuthorization();
 builder.Services.AddIdentityApiEndpoints<IdentityUser>()
     .AddEntityFrameworkStores<InformerDbContext>();
-//builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<InformerDbContext>();
 
 var app = builder.Build();
 

@@ -17,4 +17,26 @@ public class EmployeeRepositoy : IEmployeeRepository
     {
         return _dbContext.Employees.ToList();
     }
+
+    public Employee GetById(int id)
+    {
+        return _dbContext.Employees.Where(a => a.Id == id).FirstOrDefault();
+    }
+
+    public void Create(Employee employee)
+    {
+        _dbContext.Employees.Add(employee);
+        _dbContext.SaveChanges();
+    }
+
+    public void Delete(Employee employee)
+    {
+        _dbContext.Employees.Remove(employee);
+        _dbContext.SaveChanges();
+    }
+
+    public void Update()
+    {
+        _dbContext.SaveChanges();
+    }
 }

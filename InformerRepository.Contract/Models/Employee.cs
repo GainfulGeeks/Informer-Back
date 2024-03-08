@@ -1,4 +1,6 @@
-﻿namespace Informer.Repository.Contract.Models;
+﻿using System.Globalization;
+
+namespace Informer.Repository.Contract.Models;
 
 public class Employee
 {
@@ -20,4 +22,15 @@ public class Employee
 
     public bool Gender { get; set; }
 
+    public void Update(string firstname,string lastname,string natioalCode,string address,DateTime birthdate,string personalCode,
+        bool gender)
+    {
+        FirstName = firstname;
+        LastName = lastname;
+        NationalCode = natioalCode;
+        Address = address;
+        Birthdate = birthdate;
+        PhoneNumber = personalCode;
+        Gender = gender;
+    }
 }
