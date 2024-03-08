@@ -1,14 +1,15 @@
 ﻿using Informer.Repository.Contract.Models;
-using Informer.Repository.Sqlite.Mappings;
+using Informer.Repository.Mappings;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Informer.Repository.Sqlite.DbContexts;
+namespace Informer.Repository.DbContexts;
 
-public class FDbContext : DbContext
+public class InformerDbContext :IdentityDbContext
 {
     public DbSet<Employee> Employees { get; set; }
 
-    public FDbContext(DbContextOptions options) : base(options)
+    public InformerDbContext(DbContextOptions options) : base(options)
     {
 
     }
@@ -22,7 +23,5 @@ public class FDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        //optionsBuilder.UseSqlite("Data Source=c:\\Database\\products.db");
-        
     }
 }
