@@ -62,7 +62,8 @@ builder.Services.AddIdentityApiEndpoints<IdentityUser>()
 
 var app = builder.Build();
 
-app.MapIdentityApi<IdentityUser>();
+//app.MapIdentityApi<IdentityUser>();
+app.MapGroup("/api").MapIdentityApi<IdentityUser>();
 app.UseSwagger();
 app.UseSwaggerUI();
 
