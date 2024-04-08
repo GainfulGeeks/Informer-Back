@@ -3,6 +3,7 @@ using Informer.BLL.Services;
 using Informer.Repository.Contract;
 using Informer.Repository.DbContexts;
 using Informer.Repository.Repositories;
+using Informer.Repository.UnitOfWorks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -53,6 +54,8 @@ builder.Services.AddSwaggerGen(option =>
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepositoy>();
 
 builder.Services.AddScoped<IEmployeeBLL, EmployeeBLL>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
 builder.Services.AddDbContext<InformerDbContext>(u => u.UseSqlite("Data Source=Informer.db"));
 
