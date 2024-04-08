@@ -26,17 +26,10 @@ public class EmployeeRepositoy : IEmployeeRepository
     public void Create(Employee employee)
     {
         _dbContext.Employees.Add(employee);
-        _dbContext.SaveChanges();
     }
 
     public void Delete(Employee employee)
     {
         _dbContext.Employees.Remove(employee);
-        _dbContext.SaveChanges();
-    }
-
-    public void Update()
-    {
-        _dbContext.SaveChanges();
     }
 }

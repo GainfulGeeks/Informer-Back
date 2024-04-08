@@ -8,5 +8,4 @@ public interface IEmployeeRepository
     void Create(Employee employee);
     void Delete(Employee employee);
     Employee GetById(int id);
-    void Update();
 }

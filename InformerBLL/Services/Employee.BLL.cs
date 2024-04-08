@@ -8,10 +8,12 @@ namespace Informer.BLL.Services;
 public class EmployeeBLL : IEmployeeBLL
 {
     private readonly IEmployeeRepository _employeeRepository;
+    private readonly IUnitOfWork _unitOfWork;
 
-    public EmployeeBLL(IEmployeeRepository employeeRepository)
+    public EmployeeBLL(IEmployeeRepository employeeRepository, IUnitOfWork unitOfWork)
     {
         _employeeRepository = employeeRepository;
+        _unitOfWork = unitOfWork;
     }
 
     public void Create(CreateOrModifyEmployeeDTO employeeDTO)
@@ -19,6 +21,8 @@ public class EmployeeBLL : IEmployeeBLL
         var employee = EmployeeMapper.Map(employeeDTO);
 
         _employeeRepository.Create(employee);
+
+        _unitOfWork.Commit();
     }
 
     public List<EmployeeDTO> GetEmployees()
@@ -45,12 +49,13 @@ public class EmployeeBLL : IEmployeeBLL
             throw new Exception("Employee Does Not Exist!");
         }
         _employeeRepository.Delete(employee);
+        _unitOfWork.Commit();
     }
 
     public void Update(int id,CreateOrModifyEmployeeDTO dto)
     {
         var employee = _employeeRepository.GetById(id);
         employee.Update(dto.FirstName, dto.LastName, dto.PhoneNumber, dto.PhoneNumber, dto.Birthdate, dto.PersonnelCode, dto.Gender);
-        _employeeRepository.Update();
+        _unitOfWork.Commit();
     }
 }
