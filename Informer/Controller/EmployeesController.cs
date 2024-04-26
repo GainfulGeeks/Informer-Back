@@ -2,6 +2,7 @@
 using Informer.BLL.Contract.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Informer.Controller;
 
@@ -21,7 +22,6 @@ public class EmployeesController : Microsoft.AspNetCore.Mvc.Controller
     public IActionResult Get()
     {
         var employees = _employeeBLL.GetEmployees();
-
         return Ok(employees);
     }
 

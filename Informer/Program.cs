@@ -1,5 +1,6 @@
 using Informer.BLL.Contract;
 using Informer.BLL.Services;
+using Informer.Infrastructure;
 using Informer.Repository.Contract;
 using Informer.Repository.DbContexts;
 using Informer.Repository.Repositories;
@@ -65,16 +66,17 @@ builder.Services.AddIdentityApiEndpoints<IdentityUser>()
 
 var app = builder.Build();
 
+app.MapControllers();
 //app.MapIdentityApi<IdentityUser>();
 app.MapGroup("/api").MapIdentityApi<IdentityUser>();
 app.UseSwagger();
 app.UseSwaggerUI();
-
+//app.UseExceptionHandler();
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseCors(allowSpecificOrigins);
+app.Use(ExceptionMiddleware.Handle);
 
-app.MapControllers();
 
 app.Run();
